@@ -1,5 +1,7 @@
 package org.dabhand.botz.graphics;
 
+import org.dabhand.botz.connect4.Board;
+import org.dabhand.botz.connect4.Connect4;
 import org.dabhand.botz.game.Base;
 
 import javax.swing.*;
@@ -7,19 +9,21 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * Not yet in use, will become a display screen to pop up on victory
+ * A victory screen for when there are 4 in a row
  */
 public class WinScreen extends JFrame implements ActionListener {
-    public WinScreen()
+    private JFrame f = new JFrame();
+    private Grid grid;
+    public WinScreen(Grid g)
     {
 
         // create a frame
-        JFrame f = new JFrame();
+        this.grid=g;
         f.setSize(400,200);
 
         // create a button
         JButton exit = new JButton("Exit");
-        JButton restart= new JButton("Restart(not working)");
+        JButton restart= new JButton("Restart");
 
 
         // add action listener
@@ -34,13 +38,18 @@ public class WinScreen extends JFrame implements ActionListener {
         f.add(p1);
         f.show();
     }
+    public JFrame getf(){
+
+        return f;
+    }
+
 
     // if the button is pressed
     public void actionPerformed(ActionEvent e) {
         System.exit(0);
     }
     public void actionPerformed2(ActionEvent e) {
-        System.out.println("tester");
-    }
+            this.getf().hide();
+        }
     }
 

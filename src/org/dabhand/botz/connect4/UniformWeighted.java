@@ -41,11 +41,11 @@ public class UniformWeighted extends BaseScorer {
         //Victory system
         if(num == 4 && isRed)
         {
-            WinScreen w = new WinScreen();
+            WinScreen w = new WinScreen(grid);
         }
         else if(num == 4)
         {
-            WinScreen w = new WinScreen();
+            WinScreen w = new WinScreen(grid);
         }
         //ends
         if ( isRed != null ) {

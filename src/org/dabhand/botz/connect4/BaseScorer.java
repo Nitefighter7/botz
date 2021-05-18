@@ -12,7 +12,7 @@ import java.sql.SQLOutput;
  * The base from which scorers will be built
  */
 abstract public class BaseScorer extends ScoreTable {
-    private final Grid grid;
+    protected final Grid grid;
 
     public BaseScorer(int x, int y, int height, int width, Base parent, Grid grid) {
         super(x,y,height,width,parent);

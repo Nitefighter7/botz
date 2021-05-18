@@ -67,4 +67,5 @@ public class Board extends JPanel {
     private boolean isFull(int x) {
         return grid.getTile(x,0) != Tiles.Tile.EMPTY_C4;
     }
+
 }
